@@ -1,0 +1,115 @@
+/* Global css */
+@import './assets/modal.css';
+
+
+body {
+  margin: 0;
+}
+
+.main-page {
+  position: absolute;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.roulette {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.result-text {
+  text-align: center;
+  padding: 2rem;
+  font-size: x-large;
+}
+
+.roulette-container {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+
+  border-radius: 100rem;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 5px 5px 10px #808080, -5px -5px 10px #ffffff;
+  margin: auto;
+  width: 95vw;
+  max-width: 80vh;
+}
+
+.debug *{
+  border: .1px solid red;
+}
+
+.toolbar {
+  position: absolute;
+  bottom: 2rem;
+  width: 100vw;
+}
+
+.toolbar-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal-button-title {
+  margin: auto;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 5px 5px 10px #a1a1a1, 
+            -5px -5px 10px #ffffff;
+}
+
+.toolbar-wrapper {
+  margin: auto;
+  width: 80%;
+  height: 3rem;
+}
+
+.roulette-button {
+  position: absolute;
+  /* Why 45 and not 50? */
+  /* because no translate */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.roulette-button input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 200rem;
+  cursor: pointer;
+}
+
+.entry {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 5px 5px 10px #9c9c9c, -5px -5px 10px #ffffff;
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: .4rem;
+}
+
+.entry-text {
+  width: 100%;
+}
+
+form input{
+  display: flex;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+
+  background: linear-gradient(145deg, #dbdbdb, #b9b9b9);
+  box-shadow: 5px 5px 10px #717171, -5px -5px 10px #ffffff;
+  border: none;
+}
+
+form {
+  width: 100%;
+}

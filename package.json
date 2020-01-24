@@ -1,0 +1,27 @@
+{
+  "name": "initiative",
+  "version": "1.0.0",
+  "description": "Initiative Roulette",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx parcel ./src/index.html -p 4200",
+    "build": "rm -rf dist && npx parcel build ./src/index.html --public-url './'",
+    "dev-secure": "npx parcel ./src/index.html -p 4200 --https"
+  },
+  "devDependencies": {
+    "@types/parcel-env": "0.0.0",
+    "lynt": "^0.3.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "preact": "^10.2.1",
+    "purecss": "^1.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-zero": "^4.15.2"
+  }
+}
