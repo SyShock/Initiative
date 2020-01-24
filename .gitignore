@@ -1,5 +1,3 @@
-*
-
-!.gitignore
-!dist
-!dist/*
+.cache
+src
+node_modules
