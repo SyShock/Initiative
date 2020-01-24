@@ -1,6 +1,5 @@
-node_modules/
-.vscode/
-.cache
-dist/
-yarn-error.log
-package-lock.json
+*
+
+!.gitignore
+!dist
+!dist/*
