@@ -18,7 +18,7 @@ export class TemplateModal extends BaseComponent<{}, {}> {
     inputElement: HTMLTextAreaElement
     name = 'Template'
 
-    inputPlaceholder = "Input name for your current selections"
+    inputPlaceholder = "Input name for your listed options"
 
     constructor() {
         super({alias:'templates'});

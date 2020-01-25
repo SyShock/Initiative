@@ -9,7 +9,7 @@ type PostTransformationFn<F extends InitialFn> = F extends (state: IStore, ...ar
 
 const getStamp = () => {
     const d = new Date();
-    return `${d.getFullYear()}/${d.getMonth()}/${d.getDay()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+    return `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
 }
 
 const addRouletteItem = (state: IStore, val: string): IStore => {
