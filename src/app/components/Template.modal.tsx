@@ -8,15 +8,17 @@ import { Modal } from "./Modal";
 const TemplateItem = (props) =>  
     <div class="entry">
         <div class="entry-text" onClick={() => props.actions.setRouletteItems(props.value)}>{props.id}</div>
-        <div onClick={() => props.actions.removeTemplate(props)}>X</div>
+        <div class="close-icon" onClick={() => props.actions.removeTemplate(props)}>X</div>
     </div>
 
 
 @ConnectStoreAlt(Actions)
 export class TemplateModal extends BaseComponent<{}, {}> {
 
-    inputElement: HTMLInputElement
+    inputElement: HTMLTextAreaElement
     name = 'Template'
+
+    inputPlaceholder = "Input name for your current selections"
 
     constructor() {
         super({alias:'templates'});
@@ -28,6 +30,11 @@ export class TemplateModal extends BaseComponent<{}, {}> {
         this.inputElement.value = ''
     }
 
+    preventDefualtEnter = (ev: KeyboardEvent) => {
+        if (ev.keyCode == 13) {
+            this.submit(ev);
+        }
+    }
 
     render() {
         const { templates } = this.props.store;
@@ -37,7 +44,7 @@ export class TemplateModal extends BaseComponent<{}, {}> {
             <Modal
                 header={
                     <form onSubmit={this.submit} >
-                        <input ref={inputElement => this.inputElement = inputElement} ></input>
+                        <textarea placeholder={this.inputPlaceholder} ref={inputElement => this.inputElement = inputElement} onKeyDown={this.preventDefualtEnter}></textarea>
                     </form>
                 }
                 body={

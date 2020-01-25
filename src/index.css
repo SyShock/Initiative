@@ -99,7 +99,7 @@ body {
   width: 100%;
 }
 
-form input{
+form input, form textarea{
   display: flex;
   border-radius: 10px;
   width: 100%;
@@ -112,4 +112,9 @@ form input{
 
 form {
   width: 100%;
+}
+
+.close-icon {
+  user-select: none; 
+  padding: .1rem;
 }

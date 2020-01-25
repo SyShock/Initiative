@@ -8,7 +8,7 @@ import { Container } from "./Container";
 const HistoryItem: FunctionalComponent<any> = (props) =>
     <div class="entry">
         <div class="entry-text" onClick={() => props.setRouletteItems(props.value)}>{props.id}</div>
-        <div onClick={() => props.removeHistory(props)}>X</div>
+        <div class="close-icon" onClick={() => props.removeHistory(props)}>X</div>
     </div>
 
 
@@ -26,7 +26,7 @@ export class HistoryModal extends BaseComponent<{}, {}> {
 
         return (
             <Modal
-                header={<span></span>}
+                header={<span>History Log</span>}
                 body={
                     <Container 
                         Component={HistoryItem} 

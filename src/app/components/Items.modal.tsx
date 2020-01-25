@@ -9,17 +9,17 @@ import { Modal } from "./Modal";
 const Entry = (props: any) => 
     <div class="entry">
         <div class="entry-text">{props._value}</div>
-        <div onClick={() => props.removeRouletteItem(props._value)}>
-            X
-        </div>
+        <div class="close-icon" onClick={() => props.removeRouletteItem(props._value)}>X</div>
     </div>
 
 
 @ConnectStoreAlt(Actions)
 export class RouletteModal extends BaseComponent<{}, {}> {
 
-    inputElement: HTMLInputElement
+    inputElement: HTMLTextAreaElement
     name = 'Items'
+
+    inputPlaceholder = "Input options to randomly select"
 
     constructor(props) {
         super({alias:'items'});
@@ -31,6 +31,12 @@ export class RouletteModal extends BaseComponent<{}, {}> {
         this.inputElement.value = ''
     }
 
+    preventDefualtEnter = (ev: KeyboardEvent) => {
+        if (ev.keyCode == 13) {
+            this.submit(ev);
+        }
+    }
+
     render() {
         const { roulette_items } = this.props.store;
         const { removeRouletteItem } = this.props.actions;
@@ -39,7 +45,7 @@ export class RouletteModal extends BaseComponent<{}, {}> {
             <Modal 
                 header={
                     <form onSubmit={this.submit} >
-                        <input ref={inputElement => this.inputElement = inputElement} ></input>
+                        <textarea placeholder={this.inputPlaceholder} ref={inputElement => this.inputElement = inputElement} onKeyDown={this.preventDefualtEnter}></textarea>
                     </form>
                 }
                 body={
