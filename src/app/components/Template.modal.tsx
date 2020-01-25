@@ -7,8 +7,8 @@ import { Modal } from "./Modal";
 
 const TemplateItem = (props) =>  
     <div class="entry">
-        <div class="entry-text" onClick={() => props.actions.setRouletteItems(props.value)}>{props.id}</div>
-        <div class="close-icon" onClick={() => props.actions.removeTemplate(props)}>X</div>
+        <div class="entry-text" onClick={() => props.setRouletteItems(props.value)}>{props.id}</div>
+        <div class="close-icon" onClick={() => props.removeTemplate(props)}>X</div>
     </div>
 
 
