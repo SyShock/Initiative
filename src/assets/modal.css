@@ -153,8 +153,7 @@
 
 .light-modal:target {
   visibility: visible;
-
-  opacity: 100%;
+  opacity: 1;
 
 }
 
@@ -164,7 +163,7 @@
 }
 
 .light-modal:target .modal-background{
-  opacity: 100%;
+  opacity: 1;
 }
 
 
