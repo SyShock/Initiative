@@ -3,7 +3,7 @@
     "short_name": "Roulette",
     "description" : "Make desicions based on luck, blame that instead of your friends",
     "start_url": "/initiative/index.html",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
     {   
         "src": "/assets/test.png",
