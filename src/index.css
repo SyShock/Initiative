@@ -29,13 +29,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 0;
-
   border-radius: 100rem;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow: 5px 5px 10px #808080, -5px -5px 10px #ffffff;
+  background: linear-gradient(145deg,#fff,#e6e6e6);
+  box-shadow: 5px 5px 10px grey, -5px -5px 10px #fff;
   margin: auto;
-  width: 95vw;
-  max-width: 80vh;
+  height: min-content;
 }
 
 .debug *{
